@@ -20,3 +20,4 @@ Posibles Mejoras:
 - Optimizaciones de codigo y espacio
 - Generacion de una interfaz para poder interactuar mas facilmente
 - Convertirlo en un .exe
+- Puede coincidir un error existencial si el texto tiene 2998 palabras y justo se quiere escribir una clave (Se deberia solucionar para que elimine con cada Space)
