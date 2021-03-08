@@ -9,7 +9,7 @@ Modules:
 Features:
 - With CMD execute "flask run" while in the same directory as app.py
 - Add a 3 letters "Key" in order to expand it into a full text
-- Edit, remove and as many keys you want
+- Edit, remove and add many keys you want
 
 How it Works?
 - With Pynput receives keyword inputs
