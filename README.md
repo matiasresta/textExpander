@@ -18,7 +18,7 @@ How it Works?
 - In case of force exiting the program the "qqq" key is hardcoded into exiting (AVOID USING THIS KEY)
 
 Future Improvements:
-- Keys do not work if they contain nmumbers or special characters
+- Keys do not work if they contain numbers or special characters
 - Basic Code optimization
 - Basic GUI improvements
 - Automatic Server implementation
