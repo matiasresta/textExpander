@@ -1,23 +1,26 @@
-# Text Expander
-# Manual de uso
+# USER GUIDE
+Modules:
+- pynput (pip install)
+- flask (pip install)
+- os (pre-install)
+- json (pre-install)
+- threading (pre-install)
 
-Modulos necesarios:
-- Pynput (Instalable desde Pip)
-- Os (Pre-Instalado)
+Features:
+- With CMD execute "flask run" while in the same directory as app.py
+- Add a 3 letters "Key" in order to expand it into a full text
+- Edit, remove and as many keys you want
 
-Funcionalidad:
-- Se debe configurar una (o varias) claves de 3 letras para que luego sea reemplazada por un texto prestablecido
+How it Works?
+- With Pynput receives keyword inputs
+- It creates a list of inputs and checks for the last 3 inputs received
+- If the last 3 inputs are keys in the "keys.json" file then it expands into the desired text
+- In case of force exiting the program the "qqq" key is hardcoded into exiting (AVOID USING THIS KEY)
 
-Como Funciona?
-- Con Pynput recibe los inputs del teclado
-- Se crea una lista de las teclas apretadas y se revisa si las ultimas 3 letras pertenecen a las claves seleccionadas
-- Las claves son siempre de 3 letras y se deben agregar en el diccionario "database"
-- En caso de querer cerrar el programa se debera tocar "qqq" para finalizarlo
-
-Posibles Mejoras:
-- Las claves no pueden contener numeros, incluirlos
-- Cerrar el programa de una manera correcta y no forzando un error
-- Optimizaciones de codigo y espacio
-- Generacion de una interfaz para poder interactuar mas facilmente
-- Convertirlo en un .exe
-- Puede coincidir un error existencial si el texto tiene 2998 palabras y justo se quiere escribir una clave (Se deberia solucionar para que elimine con cada Space)
+Future Improvements:
+- Keys do not work if they contain nmumbers or special characters
+- Basic Code optimization
+- Basic GUI improvements
+- Automatic Server implementation
+- Web-Application instead of local app
+- There is a slight chance of bugging if turned on/off too quickly because of file interference (os module)
