@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Text Expander</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <button style="width: 100%" type="button" onclick="window.location.href='/newkey'">Add New Key or Edit</button>
+        </div>
+        <div class="col">
+            <button style="width: 100%" type="button" onclick="window.location.href='/run/'">Running: {{active}}</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table table-bordered table-striped table-dark table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">Key</th>
+                    <th scope="col">Text</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Remove</th>
+                </tr>
+                </thead>
+                {% for key, value in database.items() %}
+                <tr>
+                    <td> {{ key }}</td>
+                    <td> {{ value }}</td>
+                    <td>
+                        <button type="button" onclick="window.location.href='/edit/{{ key }}'">Edit</button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="window.location.href='/remove/{{ key }}'">Remove</button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
